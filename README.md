@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/pivotal/git_scripts.png)](https://travis-ci.org/pivotal/git_scripts)
-
 # Git Scripts
 
 These scripts are helpers for managing developer workflow when using git repos hosted on GitHub.  Install as a rubygem and they can be run as standard git commands like `git about`.
+
+[![Build Status](https://img.shields.io/travis/pivotal/git_scripts.svg)](https://travis-ci.org/pivotal/git_scripts)
 
 ## Gem Installation
 
