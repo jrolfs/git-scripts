@@ -6,11 +6,15 @@ These scripts are helpers for managing developer workflow when using git reposit
 
 ## Gem Installation
 
-    gem install pivotal_git_scripts
+```shell
+gem install pivotal_git_scripts
+```
 
 ## System Wide Installation
 
-    cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/master | gunzip | tar xvf - --strip=2
+```shell
+cd /usr/local/bin && curl -L http://github.com/pivotal/git_scripts/tarball/master | gunzip | tar xvf - --strip=2
+```
 
 ## git-about
 
@@ -20,24 +24,27 @@ These scripts are helpers for managing developer workflow when using git reposit
 
 Configures git authors when pair programming.
 
-    git pair sp js
-    user.name=Josh Susser & Sam Pierson
-    user.email=pair+jsusser+sam@pivotallabs.com
-
+```shell
+$ git pair sp js
+user.name=Josh Susser & Sam Pierson
+user.email=pair+jsusser+sam@pivotallabs.com
+```
 
 Create a `.pairs` config file in project root or your home folder.
 
-    # .pairs - configuration for 'git pair'
-    pairs:
-      # <initials>: <Firstname> <Lastname>[; <email-id>]
-      eh: Edward Hieatt
-      js: Josh Susser; jsusser
-      sf: Serguei Filimonov; serguei
-    email:
-      prefix: pair
-      domain: pivotallabs.com
-      no_solo_prefix: true
-    global: false  # Set to true for git-pair to change git configuration for all your projects
+```yaml
+# .pairs - configuration for 'git pair'
+pairs:
+  # <initials>: <Firstname> <Lastname>[; <email-id>]
+  eh: Edward Hieatt
+  js: Josh Susser; jsusser
+  sf: Serguei Filimonov; serguei
+email:
+  prefix: pair
+  domain: pivotallabs.com
+  no_solo_prefix: true
+global: false  # Set to true for git-pair to change git configuration for all your projects
+```
 
 
 By default this affects the current project (`.git/config`).
@@ -51,7 +58,9 @@ Options are:
     
 When you're done pairing, change git's configuration to use your personal details.
 
-    git pair <your-initials>
+```shell
+git pair <your-initials>
+```
 
 ## git-pair-commit
 
@@ -81,11 +90,15 @@ end
 
 exit exit_code
 ```
+
 Make sure it's executable.
+
 
 ## git-project
 
-    $ git project pivots
+```shell
+git project pivots
+```
 
 This script sets the user account you will use to access repos hosted on github.com.  It creates a symlink from `id_github_current` to `id_github_pivotal<project>`, which switches the SSH key you are currently using to access GitHub repos.  Make sure you have the following lines in your .ssh/config file:
 
