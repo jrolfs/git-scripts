@@ -1,25 +1,23 @@
-# -*- encoding: utf-8 -*-
-$LOAD_PATH.push File.expand_path("../lib", __FILE__)
-require "pivotal_git_scripts/version"
+# encoding: utf-8
 
-Gem::Specification.new do |s|
-  s.name        = "pivotal_git_scripts"
-  s.version     = PivotalGitScripts::VERSION
-  s.authors     = ["Pivotal Labs"]
-  s.email       = ["gems@pivotallabs.com"]
-  s.homepage    = "http://github.com/pivotal/git_scripts"
-  s.summary     = %q{Developer git workflow convenience scripts}
-  s.description = %q{These scripts are helpers for managing developer workflow when using git repos hosted on GitHub.}
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
-  s.rubyforge_project = "pivotal_git_scripts"
+require 'pivotal_git_scripts/version'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
-  s.license       = "MIT"
+Gem::Specification.new do |gem|
+  gem.name        = 'pivotal_git_scripts'
+  gem.version     = PivotalGitScripts::VERSION
+  gem.authors     = ['Pivotal Labs']
+  gem.email       = ['gems@pivotallabs.com']
+  gem.homepage    = 'http://github.com/pivotal/git_scripts'
+  gem.summary     = 'Developer Git workflow convenience scripts'
+  gem.description = 'These scripts are helpers for managing developer workflow when using Git repos hosted on GitHub.'
 
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  gem.rubyforge_project = 'pivotal_git_scripts'
+
+  gem.files         = `git ls-files`.split('\n')
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
+  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.require_paths = ['lib']
+  gem.license       = 'MIT'
 end
