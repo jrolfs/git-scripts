@@ -66,14 +66,21 @@ git pair <your-initials>
 
 Makes a git commit as normal, but chooses one of the pair members randomly to get credit for the commit on github (by setting the author email to that member's email address). The author name on the commit will list all members of the pair, as usual.
 
-If pair members have email addresses on different domains, you can specify them separately in your `.pairs` file.
+If pair members have email addresses on different domains, you can specify them separately in the optional `email_addresses:` key in your `.pairs` file.
 
-    pairs:
-      jd: Jane Doe
-      fb: Frances Bar
-    email_addresses:
-      jd: jane@awesome.local
-      fb: frances@foo.bar
+If pair members would like to sign commits with a GPG key, you can specifiy them in the optional `gpg_keys:` sections in your `.pairs` file.
+
+```yaml
+pairs:
+  jd: Jane Doe
+  fb: Frances Bar
+email_addresses:
+  jd: jane@awesome.local
+  fb: frances@foo.bar
+gpg_keys:
+  jd: A1B2C3D4
+  fb: E5F6G7H8
+```
 
 ### Using git-pair-commit in RubyMine
 RubyMine already supports pointing at a custom location for your git executable in the Preferences -> Version Control -> Git
