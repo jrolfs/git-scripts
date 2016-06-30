@@ -2,7 +2,7 @@
 
 These scripts are helpers for managing developer workflow when using git repositories hosted on GitHub.  Install as a RubyGem and they can be run as standard git commands, eg: `git about`.
 
-[![Build Status](https://img.shields.io/travis/pivotal/git_scripts.svg)](https://travis-ci.org/pivotal/git_scripts)
+[![Build Status](https://img.shields.io/travis/pivotal/git_scripts.svg?style=flat-square)](https://travis-ci.org/pivotal/git_scripts)
 [![Gem](https://img.shields.io/gem/v/mavenlink-git-scripts.svg?style=flat-square)]()
 
 ## Gem Installation
