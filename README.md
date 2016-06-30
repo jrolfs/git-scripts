@@ -14,7 +14,7 @@ gem install mavenlink-git-scripts
 ## System Wide Installation
 
 ```shell
-cd /usr/local/bin && curl -L http://github.com/pivotal/git-scripts/tarball/master | gunzip | tar xvf - --strip=2
+cd /usr/local/bin && curl -L http://github.com/jrolfs/git-scripts/tarball/master | gunzip | tar xvf - --strip=2
 ```
 
 ## git-about
