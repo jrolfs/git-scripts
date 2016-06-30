@@ -13,8 +13,10 @@ Gem::Specification.new do |gem|
   gem.summary     = 'Developer Git workflow convenience scripts'
   gem.description = 'These scripts are helpers for managing developer workflow when using Git repos hosted on GitHub.'
 
+  gem.rubyforge_project = 'pivotal_git_scripts'
+
   gem.files         = `git ls-files`.split('\n')
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split('\n')
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.require_paths = ['lib']
   gem.license       = 'MIT'
