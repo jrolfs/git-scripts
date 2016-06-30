@@ -55,7 +55,7 @@ Options are:
     -g, --global                     Modify global git options instead of local
     -v, --version                    Show Version
     -h, --help                       Show this.
-    
+
 When you're done pairing, change git's configuration to use your personal details.
 
 ```shell
@@ -79,6 +79,7 @@ If pair members have email addresses on different domains, you can specify them 
 RubyMine already supports pointing at a custom location for your git executable in the Preferences -> Version Control -> Git
 ![RubyMine Git Configuration](http://i.imgur.com/hTHkdeA.png)
 The trick then is that `pair-commit` doesn't encompass all git functionality, so you can't just point RubyMine directly at it, you need something in the middle that will use `pair-commit` if the first arg is `commit`, otherwise just pass through. Here's a ruby script to do just that:
+
 ```ruby
 #!/usr/bin/env ruby
 
