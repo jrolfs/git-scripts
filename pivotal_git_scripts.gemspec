@@ -21,9 +21,9 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.license       = 'MIT'
 
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'bundler'
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'unindent'
-  gem.add_development_dependency 'gem-release'
+  gem.add_development_dependency 'rake', '~> 11.2', '>= 11.2.2'
+  gem.add_development_dependency 'bundler', '~> 1.12', '>= 1.12.5'
+  gem.add_development_dependency 'rspec', '~> 3.4'
+  gem.add_development_dependency 'unindent', '~> 1.0'
+  gem.add_development_dependency 'gem-release', '~> 0.7', '>= 0.7.4'
 end
